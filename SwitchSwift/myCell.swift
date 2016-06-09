@@ -30,9 +30,11 @@ class myCell: UITableViewCell {
     func toggleSwitch() {
         if self.mySwitch.on{
             self.mySwitch .setOn(false, animated: true)
+            self.delegate.switchButtonTapped(WithStatus: self.mySwitch.on, ForCell: self)
         }
         else{
             self.mySwitch .setOn(true, animated: true)
+            self.delegate.switchButtonTapped(WithStatus: self.mySwitch.on, ForCell: self)
         }
     }
 }
