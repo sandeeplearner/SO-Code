@@ -37,5 +37,10 @@ class ViewController: UIViewController,CellProtocol,UITableViewDelegate,UITableV
         tableCell.delegate = self
         return tableCell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! myCell
+        cell.toggleSwitch()
+    }
 }
 

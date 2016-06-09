@@ -15,10 +15,24 @@ protocol CellProtocol : class {
 class myCell: UITableViewCell {
     @IBOutlet var myLabel: UILabel!
     weak var delegate : CellProtocol!
+    @IBOutlet var mySwitch: UISwitch!
     
     
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        self.delegate .switchButtonTapped(WithStatus: selected, ForCell: self)
+    //    override func setSelected(selected: Bool, animated: Bool) {
+    //        super.setSelected(selected, animated: animated)
+    //        self.delegate .switchButtonTapped(WithStatus: selected, ForCell: self)
+    //    }
+    
+    @IBAction func switchTapped(sender: UISwitch) {
+        self.delegate.switchButtonTapped(WithStatus: sender.on, ForCell: self)
+    }
+    
+    func toggleSwitch() {
+        if self.mySwitch.on{
+            self.mySwitch .setOn(false, animated: true)
+        }
+        else{
+            self.mySwitch .setOn(true, animated: true)
+        }
     }
 }
