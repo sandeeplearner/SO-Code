@@ -28,15 +28,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPj-3V-X8L">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPj-3V-X8L">
                                                     <rect key="frame" x="8" y="6" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchTapped:" destination="64S-W7-uqC" eventType="valueChanged" id="LIx-vr-ThV"/>
                                                     </connections>
                                                 </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-L0-0M3">
+                                                    <rect key="frame" x="65" y="11" width="527" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xV9-L0-0M3" firstAttribute="centerY" secondItem="ivm-cV-tQy" secondAttribute="centerY" id="Nsj-Zy-0bU"/>
+                                                <constraint firstAttribute="trailing" secondItem="xV9-L0-0M3" secondAttribute="trailing" constant="8" id="R3J-5G-hlY"/>
+                                                <constraint firstItem="pPj-3V-X8L" firstAttribute="centerY" secondItem="ivm-cV-tQy" secondAttribute="centerY" id="YQm-Ds-3AZ"/>
+                                                <constraint firstItem="pPj-3V-X8L" firstAttribute="leading" secondItem="ivm-cV-tQy" secondAttribute="leading" constant="8" id="p5a-Ba-uWS"/>
+                                                <constraint firstItem="xV9-L0-0M3" firstAttribute="leading" secondItem="pPj-3V-X8L" secondAttribute="trailing" constant="8" id="vJ3-Zw-Cdw"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="myLabel" destination="xV9-L0-0M3" id="Pvx-j0-vfO"/>
                                             <outlet property="mySwitch" destination="pPj-3V-X8L" id="8HF-vq-2tz"/>
                                         </connections>
                                     </tableViewCell>
